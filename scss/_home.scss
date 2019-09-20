@@ -1,0 +1,18 @@
+.home{
+    height: 100%;
+    padding-top: 40vh;
+    overflow: hidden;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(rgba($primary_color, 0.3),rgba($secondary_color,0.2)), url('../images/guitarist.jpg') center/cover fixed no-repeat;
+    &_name{
+        font-size: 5rem;
+        padding-bottom: 1rem;
+        margin-bottom: 1rem;
+        border-bottom: 2px solid set_text_color($primary_color);
+        &_last{
+           color: $secondary_color;
+           font-weight: 700; 
+        }
+    }
+}

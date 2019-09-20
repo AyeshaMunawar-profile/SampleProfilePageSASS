@@ -1,0 +1,92 @@
+.projects {
+  padding-bottom: 2rem;
+  &-bio-image {
+    height: 30vh;
+    width: 100%;
+    background: linear-gradient(
+        rgba($primary_color, 0.6),
+        rgba($primary_color, 0.6)
+      ),
+      url("../images/projects.jpg") center/cover fixed no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    .text-secondary {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+  }
+
+  &-items {
+    align-items: center;
+    justify-items: center;
+    width: 50vw;
+
+    padding: 0.5rem;
+    margin: 2rem auto 0 auto;
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: 1fr;
+  }
+  &-item {
+    text-align: center;
+    margin: 0 auto;
+    position: absolute;
+    position: relative;
+    border-bottom: 5px solid $secondary_color;
+    overflow: hidden;
+    cursor: pointer;
+    img {
+      width: 100%;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: $secondary_color;
+      opacity: 0;
+      @include transition_ease;
+    }
+    &:hover {
+      &::after {
+        top: 0;
+        opacity: 0.8;
+      }
+      .projects-button {
+        opacity: 1;
+      }
+    }
+  }
+
+  &-buttons {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  &-button {
+    opacity: 0;
+    color: set_text_color($secondary_color);
+    @include transition_ease;
+    &:hover {
+      color: set_text_color(set_text_color($secondary_color));
+    }
+  }
+  .social_icons {
+    display: flex;
+    flex-direction: column;
+  }
+  footer {
+    transform: rotate(90deg) translate(-3rem, -5rem);
+  }
+}

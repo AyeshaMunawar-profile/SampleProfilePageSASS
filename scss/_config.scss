@@ -1,0 +1,33 @@
+$primary_color: #272727;
+$secondary_color: orange;
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+@mixin transition_ease {
+  transition: all 0.5s ease-in-out;
+}
+
+@function set_text_color($color) {
+  @if (lightness($color) > 40%) {
+    @return black;
+  } @else {
+    @return white;
+  }
+}
+@mixin media-md {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+@mixin media-lg {
+  @media screen and (min-width: 1024px) {
+    @content;
+  }
+}
+@mixin media-xl {
+  @media screen and (min-width: 1600px) {
+    @content;
+  }
+}

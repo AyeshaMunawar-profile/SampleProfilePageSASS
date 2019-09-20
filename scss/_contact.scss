@@ -1,0 +1,41 @@
+.contact {
+ 
+  height: 100%;
+  padding-top: 40vh;
+  overflow: hidden;
+display: flex;
+flex-direction: column;
+align-items: center;
+  background: linear-gradient(
+      rgba($primary_color, 0.4),
+      rgba($primary_color, 0.4)
+    ),
+    url("../images/contact\ me.jpg") center/cover fixed no-repeat;
+     h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+  &-list {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-gap: 2rem;
+      font-size: 1.5rem;
+    padding-bottom: 1rem;
+
+    border-bottom: 2px solid set_text_color($primary_color);
+    &_last {
+      color: $secondary_color;
+      font-weight: 700;
+    }
+    i.fa {
+      &.fa-mail-forward:before, &.fa.fa-mobile-phone:before, &.fa.fa-mobile:before, &.fa.fa-map-marker:before {
+        margin-right: 1rem;
+      }
+     
+    }
+  }
+  .social_icons{
+      position: initial;
+      margin-top: 2rem;
+  }
+}
